@@ -3,8 +3,6 @@
  
  which I learnt throughout the opegl course.
 
-Most of the things I learnt, are from <b>The Book of Shaders</b> by <i>Patricio Gonzalez Vivo</i> and <i>Jen Lowe </i>
-
 
 <h1><b>Instructions</b></h1>
 
