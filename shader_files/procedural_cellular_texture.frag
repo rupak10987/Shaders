@@ -8,7 +8,7 @@ uniform float u_time;
 void main()
 {
 vec2 st=gl_FragCoord.xy/u_resolution;
-vec3 col=vec3(0.1098, 0.1882, 0.2314);
+vec3 col=vec3(0.1922, 0.0824, 0.2118);
 vec2 points[15];
 points[0]=vec2(0.2,0.2);
 points[1]=vec2(0.24,.55);
@@ -32,8 +32,8 @@ for(int i=0;i<15;i++)
 float dist=distance(st,points[i]);
 min_dist=min(min_dist,dist);
 }
-col+=2.9*vec3(min_dist*1.29);
-vec3 col2=vec3(1.0, 1.0, 1.0);
+col+=2.9*vec3(min_dist*1.39);
+vec3 col2=vec3(1.0, 0.9922, 0.9922);
 col=mix(col,col2,min_dist);
 col+=1.-step(0.001,min_dist);
 gl_FragColor=vec4(col,1);

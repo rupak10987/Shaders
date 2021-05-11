@@ -13,7 +13,7 @@ vec2 randv( vec2 p ) {
 void main() {
     vec2 st = gl_FragCoord.xy/u_resolution;
     vec3 color = vec3(0.6157, 0.8275, 0.1176);
-    st *= 10.;
+    st *= 9.;
     vec2 int_part = floor(st);
     vec2 flt_part = fract(st);
 
@@ -29,7 +29,7 @@ void main() {
             min_d = min(min_d, dist);
         }
     }
-    color += min_d;
+    color += 1.*min_d;
     vec3 color2=vec3(0.2196, 0.2078, 0.2078);
     color=mix(color,color2,min_d);
     color -= 1.-step(.01, min_d);
