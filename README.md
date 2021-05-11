@@ -8,6 +8,6 @@
 
 These codes can run on Visual Studio Codes with the "GLSL-CANVAS" and "GLSL Shader Support" extensions enabled.
 
-The easy way is to cpy the code and paste it in online glsl editor. link down below.
+The easy way is to run the code in online glsl editor. link down below.
 
 https://thebookofshaders.com/edit.php
