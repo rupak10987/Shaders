@@ -6,7 +6,7 @@
 Most of the things I learnt, are from <b>The Book of Shaders</b> by <i>Patricio Gonzalez Vivo</i> and <i>Jen Lowe </i>
 
 
-<b>Instructions</b>
+<h1><b>Instructions</b></h1>
 
 These codes can run on Visual Studio Codes with the "GLSL-CANVAS" and "GLSL Shader Support" extensions enabled.
 
