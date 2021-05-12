@@ -13,7 +13,7 @@ vec2 randv( vec2 p ) {
 void main() {
     vec2 st = gl_FragCoord.xy/u_resolution;
     vec3 color = vec3(0.6157, 0.8275, 0.1176);
-    st *= 9.;
+    st *= 4.;
     vec2 int_part = floor(st);
     vec2 flt_part = fract(st);
 
