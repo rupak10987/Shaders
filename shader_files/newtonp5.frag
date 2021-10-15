@@ -36,7 +36,7 @@ vec2 divide(vec2 z1,vec2 z2)
 }
 void main()
 {
-vec2 st=(gl_FragCoord.xy-(0.5*u_resolution))/u_resolution;
+vec2 st=(gl_FragCoord.xy-(0.1*u_resolution)-u_mouse*1.5)/u_resolution;
 vec3 col[5];
 col[0]=vec3(0.0784, 0.3137, 0.3529);
 col[1]=vec3(1.0, 0.9922, 0.4784);
@@ -50,10 +50,10 @@ r[0]=vec2(-1.0,0.);
 r[1]=vec2(-0.5,0.866025 );
 r[2]=vec2(-0.5,-0.866025 );
 r[3]=vec2(0.5,-0.866025 );
-r[4]=vec2(u_mouse.x/u_resolution.x,u_mouse.y/u_resolution.y);
-//r[4]=vec2(0.5,0.866025);
-vec2 n=st;//*(u_mouse.x-0.5);
-for(int i=0;i<30;i++)
+//r[4]=vec2(u_mouse.x/u_resolution.x,u_mouse.y/u_resolution.y);
+r[4]=vec2(0.5,0.866025);
+vec2 n=st;
+for(int i=0;i<100;i++)
 {
     vec2 tst=divide(fx(n),fpx(n));
     if(length(tst)<0.00001)
@@ -82,5 +82,6 @@ else if(index_col==3)
 gl_FragColor=vec4(col[3],1);
 else if(index_col==4)
 gl_FragColor=vec4(col[4],1);
+
 
 }
