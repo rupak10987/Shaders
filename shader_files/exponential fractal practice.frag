@@ -12,33 +12,34 @@ return result;
 void main()
 {
     vec3 cols[9];
-    cols[0]=vec3(0.6353, 0.0, 1.0);
+    cols[0]=vec3(0.3686, 1.0, 0.0);
     cols[1]=vec3(1.0, 0.9843, 0.0);
-    cols[2]=vec3(0.1176, 1.0, 0.0);
+    cols[2]=vec3(1.0, 0.0, 0.0);
     cols[3]=vec3(1.0, 0.0, 0.0);
     cols[4]=vec3(0.9843, 1.0, 0.0);
     cols[5]=vec3(1.0, 0.5333, 0.0);
     cols[6]=vec3(1.0, 0.0, 0.0);
 vec2 st=(gl_FragCoord.xy-0.5/u_resolution)/u_resolution;
-vec2 
-c=2.*(u_mouse/u_resolution);
+vec2 c;
+c.x=2.*sin(u_time);
+c.y=cos(u_time);
 vec2 z=st;
-z*=1.;
-z+=0.5;
+z*=100.9/u_time;
+z-=1.5;
 //for over lays
 float y[3];
 y[0]=z.x;
 y[1]=z.y;
 int iter=0;
-for(int i=0;i<100;i++)
+for(int i=0;i<10;i++)
 {
    // z=vec2(z.x*z.x - z.y*z.y+ c.x, 2.*z.x*z.y +c.y);
    z=vec2(pow(2.718,z.x)*cos(z.y) +c.x,pow(2.718,z.x)*sin(z.y)+c.y);
-    if(length(z)>1000.)
+    if(length(z)>10000000.)
     break;
     iter++;
 }
-float f=float(iter)/100.0;
+float f=float(iter)/10.0;
 vec3 bg_col=vec3(0.0, 0.0, 0.0);
 vec3 col=bg_col+vec3(f);
 if(f>=0. && f<=1./3.)
