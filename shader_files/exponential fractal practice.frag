@@ -30,7 +30,7 @@ float y[3];
 y[0]=z.x;
 y[1]=z.y;
 int iter=0;
-for(int i=0;i<40;i++)
+for(int i=0;i<100;i++)
 {
    // z=vec2(z.x*z.x - z.y*z.y+ c.x, 2.*z.x*z.y +c.y);
    z=vec2(pow(2.718,z.x)*cos(z.y) +c.x,pow(2.718,z.x)*sin(z.y)+c.y);
