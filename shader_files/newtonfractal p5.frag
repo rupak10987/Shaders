@@ -36,13 +36,16 @@ vec2 divide(vec2 z1,vec2 z2)
 }
 void main()
 {
-vec2 st=(gl_FragCoord.xy-(0.1*u_resolution)-u_mouse*1.3)/u_resolution*1.77;
+vec2 st=(gl_FragCoord.xy-(0.5*u_resolution))/u_resolution;
+st*=3.;
+st.y-=u_mouse.y/u_resolution.x;
+st.x-=u_mouse.x/u_resolution.y;
 vec3 col[5];
-col[0]=vec3(0.5725, 0.5725, 0.5725);
-col[1]=vec3(0.4588, 0.4588, 0.4588);
-col[2]=vec3(0.2549, 0.2549, 0.2549);
-col[3]=vec3(0.1804, 0.1804, 0.1804);
-col[4]=vec3(0.0, 0.0, 0.0);
+col[0]=vec3(0.0824, 0.3569, 0.5804);
+col[1]=vec3(0.5216, 1.0, 0.4784);
+col[2]=vec3(0.4667, 1.0, 0.9098);
+col[3]=vec3(0.9176, 0.4588, 1.0);
+col[4]=vec3(1.0, 0.7725, 0.4275);
 
 //roots
 vec2 r[5];
