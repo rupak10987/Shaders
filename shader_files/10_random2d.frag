@@ -10,7 +10,7 @@ float random (vec2 st) {
 }
 void main()
 {
-vec2 p=gl_FragCoord.xy/u_resolution;
+vec2 p=(gl_FragCoord.xy-0.5*u_resolution)/u_resolution;
 p*=vec2(15);
 vec2 int_part=floor(p);
 vec2 flt_part=fract(p);
