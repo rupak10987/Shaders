@@ -1,7 +1,7 @@
 # Shaders
  In this repository I put some GLSL Shader codes,
  
- which I learnt throughout the opegl course.
+ which I learnt throughout the opengl course.
 
 
 <h1><b>Overview</b></h1>
